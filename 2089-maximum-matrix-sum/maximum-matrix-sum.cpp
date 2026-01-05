@@ -13,9 +13,7 @@ public:
                 absSum += abs(n);
             }
         }
-        if (neg % 2 == 0)
-            return absSum;
-        else
-            return absSum - 2*mini;
+        if (neg % 2 == 1) absSum -= 2*mini;
+        return absSum;
     }
 };
