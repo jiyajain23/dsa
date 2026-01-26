@@ -7,8 +7,7 @@ public:
         for(int i=0;i<arr.size()-1;i++){
             int diff=arr[i+1]-arr[i];
             if(diff<mini){
-                ans.clear();
-                ans.push_back({arr[i],arr[i+1]});
+                ans = {{arr[i], arr[i+1]}};
                 mini=diff;
             }
             else if(diff==mini) ans.push_back({arr[i],arr[i+1]});
