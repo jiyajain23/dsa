@@ -14,6 +14,7 @@ public:
         while(!pq.empty()){
             int node=pq.top().first;
             int d=pq.top().second;
+            if(node==n-1) return d;
             pq.pop();
             for(auto it:adj[node]){
                 int nei=it.first;
@@ -24,7 +25,6 @@ public:
                 }
             }
         }
-        dist[n-1]=dist[n-1]==INT_MAX?-1:dist[n-1];
-        return dist[n-1];
+        return -1;
         }
 };
