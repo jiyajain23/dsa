@@ -15,7 +15,6 @@ public:
             prefixGcd[i] = gcd(mx[i], nums[i]);
         }
         sort(prefixGcd.begin(), prefixGcd.end(), greater<>());
-        for(int i=0;i<n;i++) cout<<prefixGcd[i];
         long long ans = 0;
         for (int i = 0; i < n / 2; i++) {
             ans += gcd(prefixGcd[i], prefixGcd[n - i - 1]);
